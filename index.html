@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio Saya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <a class="skip-link" href="#home">Lewati ke konten</a>
+
+    <!-- NAVBAR -->
+    <header class="header">
+      <div class="container nav">
+        <a href="#home" class="brand" aria-label="Kembali ke Home">
+          <span class="dot"></span> Portofolio
+        </a>
+        <nav class="menu" aria-label="Navigasi utama">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Halo, saya <span class="accent">May Rizky Ardanata</span> </h1>
+          <p class="lead">
+            I come from the city of Sidoarjo, East Java, a student at Politeknik Elektronika Negeri Surabaya (PENS) with Applied Data Science study program.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Hubungi Saya</a>
+            <a class="btn ghost" href="#skills">Lihat Skills</a>
+          </div>
+        </div>
+        <div class="hero-card">
+            <img src="poto.png.jpg" alt="Foto Profil" class="avatar-img" />
+        </div>
+      </div>
+      <a class="scroll-down" href="#about" aria-label="Scroll ke About">↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I am an enthusiastic student with a strong curiosity and a passion for learning new things, especially in technology and programming. 
+            I have a keen interest in web development and continuously work on improving my fundamental skills. 
+            I also enjoy thinking creatively, allowing me to combine logic with new ideas in both learning and creating.
+          </p>
+        </div>
+        <aside class="card">
+          <h3>Info Singkat</h3>
+          <ul class="meta">
+            <li><span>Email</span><b>ardandann05@gmail.com</b></li>
+            <li><span>Whatshapp</span><b>087855351901</b></li>
+            <li><span>Instagram</span><b>ardanrizky_</b></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-top">
+              <span>Python</span> <span>90%</span>
+            </div>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>R</span> <span>80%</span>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>SQL</span> <span>80%</span>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>UI/UX</span> <span>75%</span>
+            </div>
+            <div class="bar"><span style="width:75%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+   <section id="contact" class="section">
+    <div class="container contact-simple">
+        <h2>Contact</h2>
+        <p class="section-intro">Hubungi saya lewat tautan berikut:</p>
+
+        <div class="links-grid">
+      <!-- Instagram -->
+            <a class="link-btn ig" href="https://instagram.com/ardannrizky_" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 4.25a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Zm5.5-.88a1.13 1.13 0 1 1-2.26 0a1.13 1.13 0 0 1 2.26 0Z"/>
+                </svg>
+                Instagram
+            </a>
+
+      <!-- WhatsApp -->
+      <a class="link-btn wa" href="https://wa.me/6287855351901?text=Halo%20saya%20dari%20website%20portofolio" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.04 2C6.58 2 2.1 6.48 2.1 11.94c0 2.1.6 4.04 1.64 5.66L2 22l4.55-1.64a9.89 9.89 0 0 0 5.49 1.58h.01c5.46 0 9.94-4.48 9.94-9.94S17.5 2 12.04 2Zm0 18.06a8.1 8.1 0 0 1-4.38-1.28l-.31-.2l-2.7.97l.93-2.63l-.21-.34a8.12 8.12 0 0 1-1.27-4.38c0-4.49 3.65-8.14 8.14-8.14c2.17 0 4.21.85 5.74 2.38c1.53 1.53 2.38 3.57 2.38 5.74c0 4.49-3.65 8.14-8.14 8.14Zm4.47-6.09c-.24-.12-1.42-.7-1.64-.77c-.22-.08-.38-.12-.54.12c-.16.23-.62.77-.76.93c-.14.15-.28.17-.52.06c-.24-.12-1.02-.38-1.95-1.21c-.72-.64-1.21-1.42-1.35-1.66c-.14-.23-.01-.36.11-.48c.11-.11.24-.28.36-.42c.12-.14.16-.23.24-.39c.08-.16.04-.3-.02-.42c-.06-.12-.54-1.3-.74-1.77c-.2-.48-.4-.41-.54-.42c-.14-.01-.3-.01-.46-.01c-.16 0-.42.06-.64.3c-.22.23-.84.82-.84 2c0 1.18.86 2.32.98 2.48c.12.16 1.7 2.61 4.11 3.66c.57.25 1.02.4 1.37.51c.58.19 1.1.16 1.52.1c.46-.07 1.42-.58 1.63-1.15c.2-.57.2-1.06.14-1.15c-.06-.09-.22-.15-.46-.27Z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <h3>Thank You For Visiting My Website</h3>
+    <p>© 2025 <span class="brand-name">May Rizky Ardanata. All rights reserved.</span> </p>
+  </div>
+</footer>
+  </body>
+</html>

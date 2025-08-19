@@ -1,10 +1,10 @@
 :root{
-  --bg: #0b1220;        
-  --panel: #0f172a;       
+  --bg: #0b1220;
+  --panel: #0f172a;
   --muted: #93a4c9;
   --text: #e6ecff;
-  --accent: #6ee7ff;     
-  --accent-2: #a78bfa;    
+  --accent: #6ee7ff;
+  --accent-2: #a78bfa;
   --card: rgba(255,255,255,0.06);
   --ring: rgba(110,231,255,.35);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -16,10 +16,14 @@ body{
   margin:0;
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(103,232,249,.12), transparent 60%),
-              radial-gradient(1000px 500px at 90% 10%, rgba(167,139,250,.10), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(103,232,249,.12), transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, rgba(167,139,250,.10), transparent 60%),
+    var(--bg);
   line-height: 1.7;
+  /* aman untuk notch iPhone */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .skip-link{
@@ -28,7 +32,6 @@ body{
 .skip-link:focus{
   position:static; width:auto; height:auto; padding:.5rem 1rem; background:#111; color:#fff;
 }
-
 
 .container{
   width:min(1120px, 92%);
@@ -124,6 +127,18 @@ body{
   border-radius: 18px; padding: 28px;
   box-shadow: var(--shadow);
 }
+
+/* gambar profil agar fluid */
+img, video { max-width: 100%; height: auto; }
+.avatar-img{
+  display:block;
+  width:100%;
+  max-width: 280px;   /* batas nyaman di desktop */
+  height:auto;
+  border-radius: 16px;
+  margin-inline:auto; /* center ketika kolom tunggal */
+}
+
 .avatar{
   width:96px; height:96px; border-radius: 20px; display:grid; place-items:center;
   background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent-2));
@@ -239,3 +254,54 @@ body{
   text-decoration:none; color:#cbd6ff; font-weight:700; opacity:.8;
 }
 .scroll-down:hover{ opacity:1; }
+
+/* ============================= */
+/* ======= RESPONSIVE CSS ====== */
+/* ============================= */
+
+/* Tablet & ke bawah */
+@media (max-width: 900px){
+  .grid-2{ grid-template-columns: 1fr; }
+  .hero-inner{ grid-template-columns: 1fr; }
+  .hero{ padding-top: 120px; padding-bottom: 88px; }
+  .section{ padding: 72px 0; }
+  .nav{ gap: 10px; flex-wrap: wrap; }
+  .menu{ justify-content: center; width: 100%; }
+  .hero-text{ text-align: center; }
+  .cta{ justify-content: center; }
+  .hero-card{ padding: 22px; }
+}
+
+/* HP sedang (≤700px) */
+@media (max-width: 700px){
+  .skills{ grid-template-columns: 1fr; } /* pastikan 1 kolom */
+  .section{ padding: 64px 0; }
+  .lead{ font-size: 16px; }
+  .menu a{ padding: 10px 12px; }
+  .brand{ font-size: 15px; }
+}
+
+/* HP kecil (≤480px) */
+@media (max-width: 480px){
+  .section{ padding: 52px 0; scroll-margin-top: 78px; }
+  .header .nav{ padding: 10px 0; }
+  .brand{ font-size: 14px; }
+  .menu{ gap: 8px; }
+  .menu a{ padding: 8px 12px; font-size: 13px; }
+  .hero{ padding-top: 96px; padding-bottom: 64px; }
+  .cta .btn{ flex: 1 1 100%; }   /* tombol jadi full width bertumpuk */
+  .btn.full{ width:100%; }
+  .avatar-img{ max-width: 220px; }
+  .meta li{ flex-direction: column; align-items: flex-start; }
+}
+
+/* Layar sangat pendek: sembunyikan panah scroll agar tidak nutup konten */
+@media (max-height: 560px){
+  .scroll-down{ display:none; }
+}
+
+/* Preferensi aksesibilitas: kurangi animasi */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .btn, .link-btn{ transition: none; }
+}

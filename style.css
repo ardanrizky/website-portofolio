@@ -521,6 +521,12 @@ img, video { max-width: 100%; height: auto; }
 .btn-box-action:hover .arrow-move{
   transform: translateX(4px);
 }
+.btn-box-action.live-demo{
+  color: #34d399;
+}
+.btn-box-action.live-demo:hover{
+  color: #a7f3d0;
+}
 
 /* ---------- Contact ---------- */
 .contact-simple { max-width: 840px; }

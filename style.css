@@ -566,7 +566,7 @@ img, video { max-width: 100%; height: auto; }
 /* warna aksen tiap platform */
 .link-btn.in svg { color: #0A66C2; }   /* LinkedIn */
 .link-btn.ig svg { color: #E4405F; }   /* Instagram */
-.link-btn.wa svg { color: #25D366; }   /* WhatsApp  */
+.link-btn.mail svg { color: #EA4335; } /* Email */
 .link-btn.gh svg { color: #f0f6fc; }   /* GitHub */
 
 /* ---------- Footer ---------- */

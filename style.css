@@ -858,8 +858,8 @@ a.meta-value:hover {
 /* About Card Composition (Original & Sleek Tech Aesthetic) */
 .about-card-composition {
   position: relative;
-  width: 340px;
-  height: 350px;
+  width: 380px;
+  height: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1811,16 +1811,22 @@ body.drawer-open {
   }
 
   .hero-actions {
+    display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 460px;
+    max-width: 440px;
     margin-inline: auto;
     gap: 12px;
   }
 
   .hero-actions .btn {
-    flex: 1 1 180px;
-    padding: 13px 20px;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 150px;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 14px;
   }
 
   .hero-visual-wrapper {
@@ -1993,13 +1999,22 @@ body.drawer-open {
   }
 
   .hero-actions {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
+    max-width: 360px;
   }
 
   .hero-actions .btn {
-    width: 100%;
-    padding: 12px 20px;
+    flex: 1 1 130px;
+    max-width: 170px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13.5px;
   }
 
   /* Photo Stage on Mobile */
@@ -2050,8 +2065,8 @@ body.drawer-open {
 
   /* About Terminal Card & Metrics */
   .about-card-composition {
-    width: min(310px, 92vw);
-    height: 360px;
+    width: min(340px, 92vw);
+    height: 310px;
   }
 
   .about-terminal-card {
@@ -2060,8 +2075,9 @@ body.drawer-open {
 
   .terminal-body {
     padding: 14px 14px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.5;
+    overflow: hidden;
   }
 
   .about-metrics-grid {

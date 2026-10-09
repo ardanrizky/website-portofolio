@@ -842,9 +842,9 @@ a.meta-value:hover {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 52px;
 }
 
 /* Left: Blob + Handwritten Callout + Avatar */
@@ -858,7 +858,7 @@ a.meta-value:hover {
 /* About Card Composition (Original & Sleek Tech Aesthetic) */
 .about-card-composition {
   position: relative;
-  width: 380px;
+  width: min(450px, 100%);
   height: 330px;
   display: flex;
   align-items: center;
@@ -947,11 +947,11 @@ a.meta-value:hover {
 }
 
 .terminal-body {
-  padding: 18px 20px;
+  padding: 18px 22px;
   flex-grow: 1;
   overflow: hidden;
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: 11.5px;
+  line-height: 1.6;
 }
 
 .terminal-body pre {
@@ -961,6 +961,8 @@ a.meta-value:hover {
 
 .terminal-body code {
   font-family: var(--font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 /* Syntax Highlighting */
